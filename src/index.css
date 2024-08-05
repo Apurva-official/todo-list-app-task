@@ -6,6 +6,9 @@ body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
+body {
+  background-color: rgba(0, 0, 23, 0.08);
+}
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -113,7 +116,7 @@ select::placeholder {
 }
 
 .rightContainer {
-  background-color: rgba(0, 0, 23, 0.08);
+  /* background-color: rgba(0, 0, 23, 0.08); */
   width: 60vw;
   height: 100vh;
   padding: 60px;
@@ -404,19 +407,102 @@ select::placeholder {
     flex-direction: column;
   }
 
+  button,
+  .filterButton,
+  .addNewButton,
+  span,
+  p,
+  div {
+    font-size: 12px;
+  }
+
+  .addNewButton {
+    margin-left: 0;
+  }
+  .filterButton {
+    min-width: fit-content;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
   .leftContainer {
     width: calc(100vw - 160px);
   }
 
-  .rightContainer {
-    width: calc(100vw - 120px);
+  .todosHeader,
+  .filterHeader,
+  .divider,
+  .todoList
+  /* ,.toDoBox  */ {
+    width: 100%;
+  }
+  .rightContainer,
+  .leftContainer {
+    width: calc(100vw - 40px);
+    padding: 20px;
+    height: auto;
   }
 
+  .toDoBox {
+    padding: 15px;
+    border-left: none;
+    border-top: 10px solid orange;
+    flex-wrap: wrap-reverse;
+  }
+  .todoItem {
+    width: 100%;
+  }
+
+  .todo-title,
+  .leftContainer .form h2 {
+    font-size: 16px;
+  }
+
+  .field .label {
+    font-size: 14px;
+  }
+  .field input,
+  .field select,
+  .field textarea,
+  .todo-description,
+  .todo-due-date,
+  .todo-id,
+  .todo-priority,
+  .updateButton,
+  .deleteButton,
+  .submitBtn {
+    font-size: 12px;
+  }
+
+  .buttonContainer {
+    display: block;
+    margin-bottom: 20px;
+  }
   .showForm {
     display: block;
   }
 
+  .todosHeader {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .todosHeader h1 {
+    font-size: 14px;
+  }
+
+  .filterContainer {
+    display: block;
+  }
+  .filterHeader {
+    display: block;
+    margin-top: 10px;
+  }
   .hideForm {
     display: none;
+  }
+
+  .todosContainer {
+    height: auto;
+    position: relative;
   }
 }
